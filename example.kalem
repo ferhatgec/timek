@@ -1,0 +1,24 @@
+!required_flag("source")
+
+!flag("output=example")
+
+#include <ios>
+#include <fst>
+
+#import <cstdlib>
+
+!include_dir(".")
+
+!add_source("time")
+
+#include "time"
+
+@main int {
+	#timek upt;
+
+    @upt=Time::Initialize()
+
+	@ios::println(upt.hours, "h", upt.minutes, "m")
+
+	@return 0
+}
